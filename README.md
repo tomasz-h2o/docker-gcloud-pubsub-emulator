@@ -37,9 +37,9 @@ dev:
 ```
 
 ## Configuration
-The most important configuration parameters of the *Pub/Sub emulator* image are the host/port value the server will listen on and the directory where data files will be placed. By default, the image is configured to listen on `0.0.0.0:8538` and store its files in the `/data` directory. This behavior can be changed by providing the correct command-line options.
+The most important configuration parameters of the *Pub/Sub emulator* image are the host/port value the server will listen on and the directory where data files will be placed. By default, the image is configured to listen on `127.0.0.1:8538` and store its files in the `/data` directory. This behavior can be changed by providing the correct command-line options.
 
-The following example shows how to start the *Pub/Sub emulator* to listen on `192.168.1.3:12345` ant to store its files in the `/pubsub-data` directory.
+The following example shows how to start the *Pub/Sub emulator* to listen on `192.168.1.3:12345` and to store its files in the `/pubsub-data` directory.
 
 ```sh
 docker run --rm --tty --interactive bigtruedata/gcloud-pubsub-emulator start --host-port=192.168.1.3:12345 --data-dir=/pubsub-data
